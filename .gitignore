@@ -1,10 +1,10 @@
+*~
 *.xref
 *.lg
 *.idv
 *.4ct
 *.4tc
 *.tmp
-*.sh
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
