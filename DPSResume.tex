@@ -1,0 +1,104 @@
+% LaTeX resume using res.cls
+\documentclass[line,margin]{res} 
+\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
+\usepackage{newcent}   % uses new century schoolbook postscript font
+\usepackage{fancyhdr}  % FancyHDR package for footers 
+\usepackage{hyperref}  % HyperRef package to get fancy hyperlinks
+\usepackage{ marvosym } % Symbol library
+
+% Hyperref setup
+\hypersetup{
+	colorlinks=true,
+	urlcolor=blue
+}
+
+\pagestyle{fancy}
+\rfoot{Last Updated: \today}
+
+\begin{document}
+
+\name{Drew P. Short}
+% \address used twice to have two lines of address
+\address{151 8th Avenue South Apt\# 304, Hopkins, MN 55343}
+\address{
+    \Mobilefone \hspace{1 pt} (651)-285-4565 | 
+    \Letter \hspace{1 pt} \href{mailto:drew@sothr.com?subject=Concerning Your Resume}{drew@sothr.com} | 
+    \Mundus \hspace{1 pt} \url{http://www.sothr.com}
+}
+
+\begin{resume}
+
+\section{OBJECTIVE} A development position on a software engineering team, with special 
+                interests in web development, middleware, and backend processing systems. 
+
+\section{EDUCATION} {\sl Bachelor of Science,} Information Technology \\
+                % \sl will be bold italic in New Century Schoolbook (or
+	            % any postscript font) and just slanted in
+		        % Computer Modern (default) font
+                Minnesota State University Mankato, Mankato, MN 
+                Graduated May 2013 \\
+                Concentration: Software Engineering \\
+                Minor: Ethics 
+
+\section{COMPUTER \\ SKILLS} {\sl Languages \& Software:} Java, SQL, Scala, Javascript, 
+         Ruby, Python, C\#, C, Spring Framework, JEE, 
+                Hibernate, JUnit, Log4J, Logback, SLF4J, 
+                Backbone.js, JQuery, Bootstrap, 
+                Oracle, MySQL, MariaDB, MSSQL, SQLite. \\
+                {\sl Operating Systems:} Windows, Linux (Ubuntu, RHEL, OpenSuse), OSX.
+
+\section{EXPERIENCE} {\sl Java Developer} \hfill 2013 - Present (2 Years) \\
+                Cargill Incorporated,
+                Risk Management, Hopkins, MN 
+                \begin{itemize}  \itemsep -2pt % reduce space between items
+                \item Designed, implemented, and tested the most complex, 
+                    Risk Product to date within the restrictions of the original 
+                    system.
+                \item Migrated a Spring web application to the latest version 
+                    of JQuery, rewrote custom plugins, and re-organized the 
+                    structure to comply with standards.
+                \item Helped rewrite and upgrade a system designed to manage 
+                    Risk Products and give the end user control over the
+		    individual flow components.
+                \item Maintained and improved upon a Spring web application 
+                    that has been in use for 10+ years. Modernized components, 
+                    improved the backend, and implemented modern front-end 
+                    components for existing functionality. 
+                \end{itemize}
+ 
+                {\sl Software Engineer Intern} \hfill            2011 - 2013 (2 Years, 1 Month) \\
+                Information Technology Department, Minnesota State University Mankato, \\
+                Contracted to FPX LLC, Mankato, MN 
+                \begin{itemize}  \itemsep -2pt %reduce space between items
+                \item Developed software that permutates pre-selected data for 
+                    automated testing. 
+                \item Expanded a REST API and implemented continuous 
+                    integration testing. 
+                \item Developed a domain specific language for internal 
+                     verification, testing and reporting tools. 
+                \item Developed a 'playback' system that enabled 're-playing' 
+                    data to allow for duplication and debugging of client bugs. 
+                \item Quality assurance, code coverage and regression unit testing. 
+                \end{itemize} 
+
+                {\sl Geek Squad Agent} \hfill        2008 - 2011 (3 Years, 1 Month) \\
+                Best Buy, Blaine, MN \\
+                Best Buy, Mankato, MN 
+                \begin{itemize}  \itemsep -2pt %reduce space between items
+                \item Senior Technician. Responsible for overseeing, 
+                    repairs in the precinct. 
+                \item Provide technical support for Best Buy customers
+		    and persue software and hardware sale opportunities.
+                \end{itemize} 
+
+\section{AWARDS, \\ MEMBERSHIPS, \\ AND TRAINING}
+            	\begin{itemize}  \itemsep -2pt %reduce space between items
+                \item Eagle Scout \hfill 2007
+            	\item IEEE Member \hfill 2009-2011
+            	\item BSA Leadership Instructor \hfill Summers 2004-2007
+            	\item Attended NAYLE Leadership Course \hfill Summer 2006
+                \end{itemize}
+
+
+\end{resume}
+\end{document}
