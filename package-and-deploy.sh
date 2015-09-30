@@ -12,4 +12,5 @@
 cp DPSResume.pdf ..
 cp ResumeSite.tar.gz ..
 
+git clean -f .
 git checkout .
