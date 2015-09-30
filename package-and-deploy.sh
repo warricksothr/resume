@@ -28,3 +28,8 @@ cp ~/DPSResume.pdf .
 git add .
 git commit -m "Auto updating resume site files"
 git push origin gh-pages
+
+# Prepare the current directory
+git clean -fq .
+git clean -dXq
+git checkout master
