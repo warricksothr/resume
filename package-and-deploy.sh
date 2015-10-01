@@ -18,7 +18,7 @@ git clean -Xq
 git checkout .
 
 #Checkout the deployment directory
-git checkout tags/gh-pages
+git checkout gh-pages
 
 # Copy the files
 tar -zxvf ~/ResumeSite.tar.gz .
