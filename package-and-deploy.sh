@@ -16,7 +16,7 @@ cp ResumeSite.tar.gz ~/tmp
 
 # Prepare the current directory
 git clean -fq .
-git clean -Xq
+git clean -fXq
 git checkout .
 
 #Checkout the deployment directory
@@ -34,5 +34,5 @@ git push origin gh-pages
 
 # Prepare the current directory
 git clean -fq .
-git clean -dXq
+git clean -fdXq
 git checkout master
