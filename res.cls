@@ -240,7 +240,7 @@
   {\namefont\@name}
   \vskip 2pt
   \fullline
-  \vskip 2pt
+  \vskip 4pt
   % where do you live?
   \@ifundefined{@addressone}{%
     % do nothing
@@ -280,7 +280,7 @@
 \newskip\sectionskip
 \newdimen\resumewidth
 
-\resumewidth=6.5in
+\resumewidth=6.75in
 \sectionskip=3.5ex plus 1ex minus -.2ex % values stolen from LaTeX
 
 \def\newsectionwidth#1{%
@@ -773,14 +773,14 @@
 
 \@secpenalty = -500
 \topmargin 0pt
-\headheight 0pt
+\headheight 12pt
 \headsep 0pt
 \textheight 9in
 \parindent 0pt
 \topmargin 0in
-\oddsidemargin 0pt
-\evensidemargin 0pt
-\marginparwidth 0pt
+\oddsidemargin -10pt
+\evensidemargin -10pt
+\marginparwidth -10pt
 \parindent 0pt
 \parskip \baselineskip
 \setcounter{secnumdepth}{0}
