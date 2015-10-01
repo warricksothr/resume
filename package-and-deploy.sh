@@ -9,8 +9,10 @@
 # commit the changes
 # push the changes to github
 
-cp DPSResume.pdf ~
-cp ResumeSite.tar.gz ~
+mkdir -p ~/tmp
+
+cp DPSResume.pdf ~/tmp
+cp ResumeSite.tar.gz ~/tmp
 
 # Prepare the current directory
 git clean -fq .
@@ -20,9 +22,10 @@ git checkout .
 #Checkout the deployment directory
 git checkout gh-pages
 
-# Copy the files
-tar -zxvf ~/ResumeSite.tar.gz .
-cp ~/DPSResume.pdf .
+# Move and extract the files
+tar -zxvf ~/tmp/ResumeSite.tar.gz .
+rm ~/tmp/ResumeSite.tar.gz
+mv ~/tmp/DPSResume.pdf .
 
 # Add the files
 git add .
