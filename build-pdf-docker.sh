@@ -4,4 +4,5 @@ cd /source
 
 # Script to build a PDF from the latex source
 latex --output-format pdf DPSResume.tex
-chmod 777 DPSResume.pdf
+chmod 666 DPSResume.pdf
+rm DPSResume.log
