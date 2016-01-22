@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+function print_help {
+    echo "Resume Build Utility"
+    echo "usage: ./build resume pdf"
+    echo "usage: ./build resume html [package, deploy]"
+    echo "usage: ./build coverletter pdf <cover letter file name>"
+    echo "usage: ./build combined pdf <cover letter file name>"
+}
+
+if [ -z "$1" ]; then
+    echo "Must supply a build command"
+    print_help
+fi
+
+case "$1" in
+    "resume")
+        ;;
+    "coverletter")
+        ;;
+    "combined")
+        ;;
+    *)
+        print_help
+        ;;
+esac
