@@ -1,0 +1,72 @@
+% Cover letter using letter.sty
+\documentclass{letter} % Uses 10pt
+%Use \documentstyle[newcent]{letter} for New Century Schoolbook postscript font
+% the following commands control the margins:
+\topmargin=-1in    % Make letterhead start about 1 inch from top of page 
+\textheight=8in  % text height can be bigger for a longer letter
+\oddsidemargin=0pt % leftmargin is 1 inch
+\textwidth=6.5in   % textwidth of 6.5in leaves 1 inch for right margin
+
+\begin{document}
+
+\signature{Drew P. Short}           % name for signature 
+\longindentation=0pt                       % needed to get closing flush left
+\let\raggedleft\raggedright                % needed to get date flush left
+ 
+ 
+
+\begin{letter}{
+Mozilla Corporation \\
+331 E. Evelyn Avenue \\
+Mountain View, CA 94041}
+
+
+\begin{flushleft}
+{\large\bf Drew P. Short}
+\end{flushleft}
+\medskip\hrule height 1pt
+\begin{flushright}
+\hfill 1430 Taylor Ave W, Saint Paul, MN 55104 \\
+\hfill (651) 285-4565 
+\end{flushright} 
+\vfill % forces letterhead to top of page
+
+ 
+\opening{Dear Hiring Manager for the Research Engineer Position:} 
+ 
+\noindent I found your open Research Engineer position through the
+Mozilla career site and am applying because this role aligns with my
+future goals as a software engineer. As a loyal user of Mozilla
+products I deeply resonate with Mozilla's goal of building a better
+Internet and am excited about the possibility to work for a company
+that has changed the Internet so profoundly.
+ 
+\noindent For the past 3 years I have been expanding and maintaining
+a large Java Spring web application for Cargill Inc. Risk Management.
+This has made me sensitive to the difficulties in providing a unified
+experience on the web. I would like to use my skills and ambitions
+to make the web a better place for everyone; developers, designers and users
+alike. I have hobbyist experience with Rust and love the work I
+have done in the language so far, I think it has a very bright future
+ahead of it.
+ 
+\noindent I would love to have an opportunity to share my experience,
+discuss the position, and explore the unique background I can bring
+to the team.
+ 
+\closing{Thanks for your time,} 
+ 
+
+ 
+%\encl{}  				% Enclosures
+
+\end{letter}
+ 
+
+\end{document}
+
+
+
+
+
+
