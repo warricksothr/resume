@@ -11,7 +11,11 @@ userid="$(cat userid.info)"
 
 # Script to build a PDF from the latex source
 latex --output-format pdf DPSResume.tex
+chown $userid:$userid DPSResume.pdf
+chmod 666 DPSResume.pdf
 latex --output-format pdf ${1}.tex
+chown $userid:$userid ${1}.pdf
+chmod 666 ${1}.pdf
 
 outfile="${1}_with_Resume.pdf"
 pdfjam --fitpaper 'true' --rotateoversize 'false' --suffix joined --no-landscape --outfile $outfile ${1}.pdf DPSResume.pdf
