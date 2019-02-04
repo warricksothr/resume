@@ -1,4 +1,4 @@
 # [View Resume](https://warricksothr.github.io/resume)
-# [Download Resume](https://warricksothr.github.io/resume/DPSResume.pdf)
+# [Download Resume](https://warricksothr.github.io/resume/resume.pdf)
 
-Basic resume style based on the work by Michael DeCorte
+Resume style based on the work by Michael DeCorte
