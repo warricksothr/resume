@@ -1,0 +1,105 @@
+\newcounter{datetoday}
+\newcounter{diffyears}
+\newcounter{diffmonths}
+\newcounter{diffdays}
+
+% Function curtesy of Martin Scharrer
+% http://tex.stackexchange.com/questions/14518/difference-between-two-dates
+\newcommand{\difftoday}[3]{%
+	\setmydatenumber{datetoday}{\the\year}{\the\month}{\the\day}%
+	\setmydatenumber{diffdays}{#1}{#2}{#3}%
+	\addtocounter{diffdays}{-\thedatetoday}%
+	\ifnum\value{diffdays}>0
+		\def\diffbefore{in }%
+		\def\diffafter{}%
+	\else
+		\def\diffbefore{}%
+		\def\diffafter{}%
+		\setcounter{diffdays}{-\value{diffdays}}%
+	\fi
+	\setcounter{diffyears}{\value{diffdays}/365}%
+	\setcounter{diffdays}{\value{diffdays}-365*\value{diffyears}}%
+	\setcounter{diffmonths}{\value{diffdays}/30}%
+	\setcounter{diffdays}{\value{diffdays}-30*\value{diffmonths}}%
+	%
+	\diffbefore
+	\ifnum\value{diffyears}=0
+	\else
+		\ifnum\value{diffyears}>1
+			\thediffyears\space years\ignorespacesafterend
+		\else
+			\thediffyears\space year\ignorespacesafterend
+		\fi
+	\fi
+	\ifnum\value{diffmonths}=0
+	\else
+		\ifnum\value{diffyears}>0
+			,
+		\fi
+		\ifnum\value{diffmonths}>1
+			\thediffmonths\space months\ignorespacesafterend
+		\else
+			\thediffmonths\space month\ignorespacesafterend
+		\fi
+	\fi
+	\diffafter
+}
+
+\newcommand{\diffdates}[6]{%
+	\setmydatenumber{datetoday}{#4}{#5}{#6}%
+	\setmydatenumber{diffdays}{#1}{#2}{#3}%
+	\addtocounter{diffdays}{-\thedatetoday}%
+	\ifnum\value{diffdays}>0
+		\def\diffbefore{in }%
+		\def\diffafter{}%
+	\else
+		\def\diffbefore{}%
+		\def\diffafter{}%
+		\setcounter{diffdays}{-\value{diffdays}}%
+	\fi
+	\setcounter{diffyears}{\value{diffdays}/365}%
+	\setcounter{diffdays}{\value{diffdays}-365*\value{diffyears}}%
+	\setcounter{diffmonths}{\value{diffdays}/30}%
+	\setcounter{diffdays}{\value{diffdays}-30*\value{diffmonths}}%
+	%
+	\diffbefore
+	\ifnum\value{diffyears}=0
+	\else
+		\ifnum\value{diffyears}>1
+			\thediffyears\space years\ignorespacesafterend
+		\else
+			\thediffyears\space year\ignorespacesafterend
+		\fi
+	\fi
+	\ifnum\value{diffmonths}=0
+	\else
+		\ifnum\value{diffyears}>0
+			,
+		\fi
+		\ifnum\value{diffmonths}>1
+			\thediffmonths\space months\ignorespacesafterend
+		\else
+			\thediffmonths\space month\ignorespacesafterend
+		\fi
+	\fi
+	\diffafter
+}
+
+% Calculate complete years from a start date to today, output as "X+ years"
+% Usage: \yearsplus{YYYY}{MM}{DD}
+% Example: \yearsplus{2011}{12}{01} outputs "15+ years" (if today >= 2026-12-01)
+\newcommand{\yearsplus}[3]{%
+	\setmydatenumber{datetoday}{\the\year}{\the\month}{\the\day}%
+	\setmydatenumber{diffdays}{#1}{#2}{#3}%
+	\addtocounter{diffdays}{-\thedatetoday}%
+	% Make positive (we're going backwards in time)
+	\setcounter{diffdays}{-\value{diffdays}}%
+	% Calculate complete years only
+	\setcounter{diffyears}{\value{diffdays}/365}%
+	% Output format: "X+ years" or "X+ year" (singular for 1)
+	\ifnum\value{diffyears}>1
+		\thediffyears+ years\ignorespacesafterend
+	\else
+		\thediffyears+ year\ignorespacesafterend
+	\fi
+}

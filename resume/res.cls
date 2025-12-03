@@ -280,8 +280,10 @@
 \newskip\sectionskip
 \newdimen\resumewidth
 
+%\resumewidth=6.75in
+%\sectionskip=3.5ex plus 1ex minus -.2ex % values stolen from LaTeX
 \resumewidth=6.75in
-\sectionskip=3.5ex plus 1ex minus -.2ex % values stolen from LaTeX
+\sectionskip=3.0ex plus 1ex minus -.2ex % values stolen from LaTeX
 
 \def\newsectionwidth#1{%
 		     \sectionwidth=#1
